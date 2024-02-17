@@ -2,8 +2,9 @@
 
 #define SCREEN_WIDTH 1200
 #define SCREEN_HEIGHT 900
+#define SCREEN_SMTH 900
 
-#define BALL_SPEED 2.0f
+#define BALL_SPEED 5.0f
 
 int main() {
   InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "my game");
