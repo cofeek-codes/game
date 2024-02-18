@@ -9,9 +9,9 @@ int main() {
   SetTargetFPS(60);
 
   // background
-  Texture2D background1 = LoadTexture("/background_1.png");
-  Texture2D background2 = LoadTexture("/assets/background/background_2.png");
-  Texture2D background3 = LoadTexture("/assets/background/background_3.png");
+  Texture2D background1 = LoadTexture("assets/background/background_1.png");
+  Texture2D background2 = LoadTexture("assets/background/background_2.png");
+  Texture2D background3 = LoadTexture("assets/background/background_3.png");
   // background
 
   // init
@@ -33,7 +33,11 @@ int main() {
   // game loop
 
   // deinit
-
+  UnloadTexture(background1);
+  UnloadTexture(background2);
+  UnloadTexture(background3);
   // deinit
   CloseWindow();
+
+  return 0;
 }
