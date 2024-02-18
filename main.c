@@ -33,7 +33,7 @@ int main() {
 
     BeginDrawing();
 
-    ClearBackground(WHITE);
+    ClearBackground(GREEN);
 
     // ball
 
