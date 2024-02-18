@@ -10,8 +10,6 @@ int main() {
 
   // background
   Texture2D background1 = LoadTexture("assets/background/background_1.png");
-  Texture2D background2 = LoadTexture("assets/background/background_2.png");
-  Texture2D background3 = LoadTexture("assets/background/background_3.png");
   // background
 
   // init
@@ -34,8 +32,6 @@ int main() {
 
   // deinit
   UnloadTexture(background1);
-  UnloadTexture(background2);
-  UnloadTexture(background3);
   // deinit
   CloseWindow();
 
