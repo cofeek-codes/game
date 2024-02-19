@@ -9,8 +9,6 @@ int main(void) {
   Texture2D background_texture =
       LoadTexture("assets/background/background_1.png");
 
-  SetWindowState(FLAG_FULLSCREEN_MODE);
-
   while (!WindowShouldClose()) {
     BeginDrawing();
     ClearBackground(RAYWHITE);
