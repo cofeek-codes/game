@@ -1,38 +1,33 @@
-#include <raylib.h>
+#include "raylib.h"
 
-#define SCREEN_WIDTH 1920
-#define SCREEN_HEIGHT 1080
+int main(void) {
+  int screenWidth = 1920;
+  int screenHeight = 1080;
 
-int main() {
-  // init
-  InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "surviavalist");
-  SetTargetFPS(60);
+  InitWindow(screenWidth, screenHeight, "survivalist");
 
-  // background
-  Texture2D background1 = LoadTexture("assets/background/background_1.png");
-  // background
+  Texture2D background_texture =
+      LoadTexture("assets/background/background_1.png");
 
-  // init
-
-  // game loop
+  SetWindowState(FLAG_FULLSCREEN_MODE);
 
   while (!WindowShouldClose()) {
-    // update
-
-    // update
-
-    // draw
     BeginDrawing();
-    DrawTexture(background1, 0, 0, WHITE);
+    ClearBackground(RAYWHITE);
+
+    // Draw the texture stretched to fullscreen
+    DrawTexturePro(
+        background_texture,
+        (Rectangle){0, 0, (float)background_texture.width,
+                    (float)-background_texture.height},
+        (Rectangle){0, 0, (float)GetScreenWidth(), (float)GetScreenHeight()},
+        (Vector2){0, 0}, 0.0f, WHITE);
+
     EndDrawing();
-    // draw
   }
 
-  // game loop
-
-  // deinit
-  UnloadTexture(background1);
-  // deinit
+  // Unload the texture and close the window
+  UnloadTexture(background_texture);
   CloseWindow();
 
   return 0;
