@@ -65,7 +65,11 @@ int main(void) {
   }
 
   // Unload the texture and close the window
+
   UnloadTexture(background_texture);
+  UnloadTexture(rock_tile_texture);
+  UnloadTexture(grass_tile_texture);
+
   CloseWindow();
 
   return 0;
