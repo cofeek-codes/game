@@ -51,14 +51,12 @@ int main(void) {
 
     // grass_tiles
 
-    /* DrawTexture(grass_tile_texture, GetScreenWidth() / 2, GetScreenHeight() /
-     * 2, */
-    /*             WHITE); */
-
-    DrawTexture(grass_tile_texture, 0,
-                GetScreenHeight() -
-                    ((GROUND_HEIGHT + 1) * grass_tile_texture.height),
-                WHITE);
+    for (int i = 0; i < (GetScreenWidth() / rock_tile_texture.width) + 1; i++) {
+      DrawTexture(grass_tile_texture, i * rock_tile_texture.width,
+                  GetScreenHeight() -
+                      ((GROUND_HEIGHT + 1) * grass_tile_texture.height),
+                  WHITE);
+    }
     // grass_tiles
 
     EndDrawing();
